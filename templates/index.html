@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link rel="stylesheet" href="static/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+        <title>Controller</title>
+    </head>
+    <body>
+        <h1>Sense Hat Controller</h1>
+        {%if message %}
+            <p class = "message">{{ message}}</p>
+        {% endif %}
+        <form action="/sensors" method="post">
+            <button class="button" type="submit">Run Sensors</button>
+        </form>
+        <form action="/joystick" method="post">
+            <button class="button"type="submit">Run Joystick</button>
+        </form>
+        <form action="/images" method="post">
+            <button class="button" type="submit">Run images</button>
+        </form>
+        
+        <form action="/messages" method="post">
+            <input class="button" type="text" name="message" placeholder="Enter the message you want to display" required>
+            <br>
+            <label for="text_color">What text color do you need:</label>
+            <br>
+                <input class="button" type="color" name="color" required>
+            </label>
+            <br>
+            <label for="background_color">What background color do you need:</label>
+            <br>
+                <input class="button" type="color" name="back_colour" required>
+            </label>
+            <br>
+            <input class="button"  type="number" name="scrollspeed" step="0.01" value="0.1" min="0.01" placeholder="Enter the scroll speed of the text" required>
+            <br>
+            <button class="button" type="submit">Run messages</button>
+            
+        </form>
+    </body>
+</html>
