@@ -18,8 +18,7 @@ You will need a **Raspberry Pi Sense HAT**. You can get one here:
 Run the following commands on your Raspberry Pi:
 
 ```bash
-sudo apt-get update
-sudo apt-get upgrade
+sudo apt-get update && sudo apt upgrade -y
 sudo apt-get install sense-hat
 sudo apt install python3-flask
 ```
