@@ -15,15 +15,17 @@ You will need a **Raspberry Pi Sense HAT**. You can get one here:
 
 ### 1. Install Dependencies
 
-Run the following commands on your Raspberry Pi:
+Run the following commands on your Raspberry Pi to update it and install the sensehat and flask dependencies, if you dont already have them or if them are not updated:
 
 ```bash
+sudo apt update && sudo apt upgrade -y
 sudo apt-get update && sudo apt upgrade -y
 sudo apt-get install sense-hat
 sudo apt install python3-flask
 ```
 
 ### 2. Clone the Repository
+This is to get all the code you need so that you can run the code, as well as changing to the folder as well as renaming the folder to Webapp.
 
 ```bash
 git clone https://github.com/Thecodeguyrandom/Flask-Webapp-for-the-raspberry-pi-4b
